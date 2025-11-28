@@ -9,14 +9,14 @@ function Header() {
   };
 
   return (
-    <header className="bg-[#444c2c] text-white shadow-lg">
+    <header className="absolute text-white top-0 left-0 w-full bg-transparent z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           
           {/* Logo/Brand - Left Side */}
           <div className="flex items-center">
             <h1 className="text-xl md:text-2xl font-bold tracking-tight">
-                Lab<span className='text-cyan-500'>Invo</span>
+                Lab<span className='text-purple-800'>Invo</span>
             </h1>
           </div>
 
@@ -42,7 +42,7 @@ function Header() {
             <div className="hidden md:block">
               <SignedOut>
                 <SignInButton mode="modal">
-                  <button className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors text-sm md:text-base font-medium">
+                  <button className="bg-purple-700/90 hover:bg-purple-900 text-white px-4 py-2 rounded-lg transition-colors text-sm md:text-base font-medium">
                     Sign In
                   </button>
                 </SignInButton>

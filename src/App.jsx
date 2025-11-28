@@ -1,30 +1,36 @@
 // App.jsx
-import './App.css';
-import Header from './components/Header.jsx';
+import "./App.css";
+import Header from "./components/Header.jsx";
+import LiquidEther from "./components/LiquidEther.jsx";
 
 function App() {
   return (
     <>
+    <div className="bg-black">
+      
       <Header />
-      
-      <main className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold text-blue-500 mb-4">
-          Welcome to My App
-        </h1>
-        <p className="text-gray-700 mb-6">
-          This is a simple React application.
-        </p>
-        <button 
-          onClick={() => alert('Button clicked!')}
-          className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg"
-        >
-          Click Me
-        </button>
-      </main>
-      
-      <footer className="bg-gray-800 text-white text-center py-4 mt-auto">
-        <p>&copy; 2023 My App</p>
-      </footer>
+
+      <div style={{ width: "100%", height: "100vh", position: "relative" }}>
+        <LiquidEther className="relative"
+          colors={["#5227FF", "#FF9FFC", "#B19EEF"]}
+          mouseForce={20}
+          cursorSize={100}
+          isViscous={false}
+          viscous={30}
+          iterationsViscous={32}
+          iterationsPoisson={32}
+          resolution={0.5}
+          isBounce={false}
+          autoDemo={true}
+          autoSpeed={0.5}
+          autoIntensity={2.2}
+          takeoverDuration={0.25}
+          autoResumeDelay={3000}
+          autoRampDuration={0.6}
+          />
+
+      </div>
+          </div>
     </>
   );
 }
