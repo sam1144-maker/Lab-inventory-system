@@ -14,23 +14,23 @@ function Header() {
   };
 
   return (
-    <header className="absolute text-white top-0 left-0 w-full bg-transparent z-50">
+    <header className="fixed text-white top-0 left-0 w-full bg-transparent z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           {/* Logo/Brand - Left Side */}
           <div className="flex items-center">
-            <h1 className="text-xl md:text-2xl font-bold tracking-tight">
+            <h1 className="text-2xl font-bold tracking-tight cursor-default">
               lab<span className="text-purple-500">Invo</span>
             </h1>
           </div>
 
           {/* Navigation Links - Center (Hidden on Mobile) */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex items-center space-x-10">
             <a
               href="#benefits"
               className="hover:text-gray-300 transition-colors"
             >
-              Benefits
+              Features
             </a>
             <a
               href="#specifications"
@@ -55,7 +55,7 @@ function Header() {
             <div className="hidden md:block">
               <SignedOut>
                 <SignInButton mode="modal">
-                  <button className="bg-purple-700/90 hover:bg-purple-900 text-white px-4 py-2 rounded-lg transition-colors text-sm md:text-base font-medium">
+                  <button className="absolute top-3 right-16 bg-purple-700/90 hover:bg-purple-900 text-white px-4 py-2 rounded-lg transition-colors text-base font-medium">
                     Sign In
                   </button>
                 </SignInButton>
@@ -65,7 +65,7 @@ function Header() {
                 <UserButton
                   appearance={{
                     elements: {
-                      avatarBox: "w-10 h-10 md:w-12 md:h-12",
+                      avatarBox: "w-10 h-10",
                     },
                   }}
                 />
@@ -99,39 +99,39 @@ function Header() {
 
         {/* Mobile Menu Dropdown */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out absolute top-full left-0 w-full bg-black/95 backdrop-blur-md shadow-xl rounded-b-2xl ${
             isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
           }`}
         >
           <nav className="pt-4 pb-2 border-t border-gray-700 mt-4">
             <div className="flex flex-col space-y-3">
               <a
-                href="#benefits"
+                href="#features"
                 className="hover:text-gray-300 hover:bg-gray-700 px-3 py-2 rounded transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Benefits
+                Features
               </a>
               <a
                 href="#specifications"
                 className="hover:text-gray-300 hover:bg-gray-700 px-3 py-2 rounded transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Specifications
+                About
               </a>
               <a
                 href="#how-to"
                 className="hover:text-gray-300 hover:bg-gray-700 px-3 py-2 rounded transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                How-to
+                Docs
               </a>
               <a
                 href="#contact"
                 className="hover:text-gray-300 hover:bg-gray-700 px-3 py-2 rounded transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Contact Us
+                Contact
               </a>
 
               {/* Auth Section in Mobile Menu */}

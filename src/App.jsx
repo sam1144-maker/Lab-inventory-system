@@ -1,6 +1,7 @@
 // App.jsx
-import "./App.css";
+
 import Header from "./components/Header.jsx";
+import HeroRoleSection from "./components/HeroRoleSection.jsx";
 import LiquidEther from "./components/LiquidEther.jsx";
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
       <Header />
 
       <div style={{ width: "100%", height: "100vh", position: "relative" }}>
-        <LiquidEther className="relative"
+        <LiquidEther className="absolute inset-0 z-0"
           colors={["#5227FF", "#FF9FFC", "#B19EEF"]}
           mouseForce={20}
           cursorSize={100}
@@ -28,6 +29,11 @@ function App() {
           autoResumeDelay={3000}
           autoRampDuration={0.6}
           />
+          <div className="absolute inset-0 flex flex-col items-center justify-center px-4">
+            <HeroRoleSection  
+              className="relative z-10"
+            />
+            </div>
 
       </div>
           </div>
