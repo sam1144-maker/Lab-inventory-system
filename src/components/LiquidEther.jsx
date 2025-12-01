@@ -1003,8 +1003,8 @@ export default function LiquidEther({
     }
 
     const container = mountRef.current;
-    container.style.position = container.style.position || 'relative';
-    container.style.overflow = container.style.overflow || 'hidden';
+    // container.style.position = container.style.position || 'relative';
+    // container.style.overflow = container.style.overflow || 'hidden';
 
     const webgl = new WebGLManager({
       $wrapper: container,
@@ -1165,7 +1165,7 @@ export default function LiquidEther({
   return (
     <div
       ref={mountRef}
-      className={`w-full h-full relative overflow-hidden pointer-events-none touch-none ${className || ''}`}
+      className={`w-full h-full overflow-hidden pointer-events-none touch-none ${className || ''}`}
       style={style}
     />
   );
