@@ -116,7 +116,7 @@ function HeroRoleSection() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-24 md:pt-32 pb-8 md:pb-12 lg:pb-20 px-4">
-      <div className="container mx-auto max-w-[90rem]"> 
+      <div className="container mx-auto max-w-\[90rem\]"> 
         {/* Title Section */}
         <motion.div
           className="text-center mb-6 md:mb-10 lg:mb-16"
@@ -161,7 +161,7 @@ function HeroRoleSection() {
                   className={`relative bg-linear-to-br ${role.gradient} ${role.glowColor} rounded-2xl p-4 md:p-6 lg:p-8 overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-75 h-full flex flex-col justify-between`}
                 >
                   {/* Content */}
-                  <div className="relative z-10 flex-grow">
+                  <div className="relative z-10 grow">
                     {/* Icon */}
                     <div className="flex justify-center mb-3 md:mb-4">
                       <div className="bg-white/10 backdrop-blur-sm p-3 md:p-4 lg:p-5 rounded-full border-2 border-white/20">
